@@ -1,0 +1,13 @@
+queue_rules:
+  - name: default
+    queue_conditions: []
+    merge_conditions: []
+    merge_method: merge
+
+pull_request_rules:
+  - name: B2 cmdtest base rule
+    conditions:
+      - -closed
+    actions:
+      comment:
+        message: "B2-CMDTEST-BASE-EXECUTED author={{author}}"
